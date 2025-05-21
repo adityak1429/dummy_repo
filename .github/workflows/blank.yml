@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: mic check
-        run: ls ${{ github.workspace }}
+        run: echo ${{ secrets.SELLER_ID }}
 
       - name: Checkout repository
         uses: actions/checkout@v4
