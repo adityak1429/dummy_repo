@@ -17,5 +17,5 @@ jobs:
         client-id: ${{ secrets.AZURE_AD_APPLICATION_CLIENT_ID }}
         client-secret: ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
         app-id: 9PHBP0RP4RV6
-        package-path: "${{ github.workspace }}/dummyapp123456.msixupload"
+        package-path: "${{ github.workspace }}/dummyapp123456.msixbundle"
 
