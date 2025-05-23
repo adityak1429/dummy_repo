@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setup msstore-cli
+        uses: microsoft/setup-msstore-cli@v1.1
       - name: mic check
         run: echo ${{ secrets.SELLER_ID }}
 
