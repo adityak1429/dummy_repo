@@ -1,4 +1,5 @@
-name: myTest1
+name: myTest
+
 
 on:
   push:
