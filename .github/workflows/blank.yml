@@ -17,6 +17,5 @@ jobs:
         tenant-id: ${{ secrets.AZURE_AD_TENANT_ID }}
         client-id: ${{ secrets.AZURE_AD_APPLICATION_CLIENT_ID }}
         client-secret: ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
-        seller-id: ${{secrets.SELLER_ID}}
-
+        seller-id: 90753410
 
