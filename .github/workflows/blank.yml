@@ -10,6 +10,7 @@ jobs:
   start-store-submission:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - uses: isaacrlevin/windows-store-action@1.0
       name: Publish to Store
       with:
