@@ -11,6 +11,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
+    - uses: microsoft/setup-msstore-cli@v1.1
     - uses: adityak1429/autopublisher_cli@main
       name: Publish to Store
       with:
