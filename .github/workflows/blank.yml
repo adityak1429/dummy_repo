@@ -1,37 +1,10 @@
-name: myTest
-
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: windows-latest
-
-    steps:
-      - name: Setup msstore-cli
-        uses: microsoft/setup-msstore-cli@v1.1
-      - name: mic check
-        run: echo ${{ secrets.SELLER_ID }}
-
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: mic check again
-        run: ls ${{ github.workspace }}
-
-      - name: Run a one-line script
-        run: echo $(date)
-
-      - name: Run hello_world
-        uses: adityak1429/autoPublisher_cli@main
-        with:
-          seller-id: ${{secrets.uyfuk}}
-          tenant-id: ${{secrets.AZURE_AD_TENANT_ID}}
-          client-id: ${{secrets.AZURE_AD_APPLICATION_CLIENT_ID}}
-          client-secret: ${{secrets.AZURE_AD_APPLICATION_SECRET}}
-          
+name: MSStore CLI
+trigger:
+- main
+pool:
+  vmImage: 'windows-latest'
+steps:
+- checkout: self
+- task: UseMSStoreCLI@0
+- script: msstore reconfigure --tenantId ${{secrets.AZURE_AD_TENANT_ID}} --sellerId ${{SELLER_ID}} --clientId ${{AZURE_AD_APPLICATION_CLIENT_ID}} --clientSecret ${{AZURE_AD_APPLICATION_SECRET}}
+- script: msstore apps list
