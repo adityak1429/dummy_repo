@@ -25,7 +25,7 @@ jobs:
         run: echo $(date)
 
       - name: Run hello_world
-        uses: adityak1429/autoPublisher_cli
+        uses: adityak1429/autoPublisher_cli@v1
         with:
           seller-id: ${{secrets.SELLER_ID}}
           tenant-id: ${{secrets.AZURE_AD_TENANT_ID}}
