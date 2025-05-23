@@ -28,7 +28,7 @@ jobs:
       - name: Run hello_world
         uses: adityak1429/autoPublisher_cli@main
         with:
-          seller-id: ${{secrets.SELLER_ID}}
+          seller-id: ${{secrets.uyfuk}}
           tenant-id: ${{secrets.AZURE_AD_TENANT_ID}}
           client-id: ${{secrets.AZURE_AD_APPLICATION_CLIENT_ID}}
           client-secret: ${{secrets.AZURE_AD_APPLICATION_SECRET}}
