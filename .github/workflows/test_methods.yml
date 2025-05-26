@@ -16,6 +16,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: List contents of github.workspace
+        run: ls -R ${{ github.workspace }}
+
       - name: Publish to Microsoft Store
         uses: isaacrlevin/windows-store-action@1.0
         with:
@@ -23,4 +26,4 @@ jobs:
           client-id: ${{ secrets.AZURE_AD_APPLICATION_CLIENT_ID }}
           client-secret: ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
           app-id: ${{ secrets.STORE_APP_ID }}
-          package-path: ${{ github.workspace }}/FitnessFuel.msixbundle
+          package-path: ${{ github.workspace }}
