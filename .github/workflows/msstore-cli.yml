@@ -14,12 +14,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install .NET Runtime
-        run: |
-          wget https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-7.0.10-linux-x64-binaries
-          tar -xvf runtime-7.0.10-linux-x64-binaries
-          sudo mv dotnet /usr/local/share/dotnet
-          sudo ln -s /usr/local/share/dotnet/dotnet /usr/local/bin/dotnet
+      - name: setup .NET Runtime
+        uses: actions/setup-dotnet@v4
 
       - name: Install msstore-cli
         run: |
