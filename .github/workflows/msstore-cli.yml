@@ -1,14 +1,22 @@
 name: MSStore CLI
+
 on:
   push:
     branches: [ main ]
+
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
-    - uses: actions/checkout@v3
-    - uses: microsoft/setup-msstore-cli@v1.1
-    - uses: adityak1429/autopublisher@main
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup MSStore CLI
+      uses: microsoft/setup-msstore-cli@v1.1
+
+    - name: Run AutoPublisher
+      uses: adityak1429/autopublisher@main
       with:
         tenant-id: ${{ secrets.AZURE_AD_TENANT_ID }}
         client-id: ${{ secrets.AZURE_AD_APPLICATION_CLIENT_ID }}
@@ -16,4 +24,4 @@ jobs:
         seller-id: ${{ secrets.SELLER_ID }}
         command: getmetadata
         product-id: 9NP0T3QQXL70
-        package-path: ${{ github.workspace }}/FitnessFuel.msixbundle
+        package-path: "${{ github.workspace }}\\FitnessFuel.msixbundle"
