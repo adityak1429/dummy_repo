@@ -26,4 +26,5 @@ jobs:
         product-id: 9NP0T3QQXL70
         package-path: "${{ github.workspace }}/dir/apps"
         photos-path: "${{ github.workspace }}/dir/photos"
+        json-file-path: "${{ github.workspace }}/dir/metadata.json"
         
