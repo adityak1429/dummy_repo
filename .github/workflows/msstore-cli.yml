@@ -24,4 +24,6 @@ jobs:
         seller-id: ${{ secrets.SELLER_ID }}
         command: publish
         product-id: 9NP0T3QQXL70
-        package-path: "${{ github.workspace }}\\FitnessFuel.msixbundle"
+        package-path: "${{ github.workspace }}/dir/apps"
+        photos-path: "${{ github.workspace }}/dir/photos"
+        
