@@ -1,4 +1,3 @@
-
 name: Setup StoreBroker
 
 on:
@@ -14,11 +13,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install PowerShell Core
-      shell: cmd
+    # Optional: Install specific version of PowerShell Core (only if needed)
+    - name: Install PowerShell 7.2.0
+      shell: powershell
       run: |
-        powershell -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/PowerShell/PowerShell/releases/download/v7.2.0/PowerShell-7.2.0-win-x64.msi'))"
+        $msi = "$env:TEMP\PowerShell-7.2.0-win-x64.msi"
+        Invoke-WebRequest -Uri "https://github.com/PowerShell/PowerShell/releases/download/v7.2.0/PowerShell-7.2.0-win-x64.msi" -OutFile $msi
+        Start-Process msiexec.exe -ArgumentList "/i `"$msi`" /quiet /norestart" -Wait
 
+    # Use pwsh (PowerShell Core) for the following steps
     - name: Install StoreBroker module
       shell: pwsh
       run: |
