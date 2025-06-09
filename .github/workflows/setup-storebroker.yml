@@ -1,0 +1,30 @@
+
+name: Setup StoreBroker
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup-storebroker:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install PowerShell Core
+      shell: cmd
+      run: |
+        powershell -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/PowerShell/PowerShell/releases/download/v7.2.0/PowerShell-7.2.0-win-x64.msi'))"
+
+    - name: Install StoreBroker module
+      shell: pwsh
+      run: |
+        Install-Module -Name StoreBroker -Force -Scope CurrentUser
+
+    - name: Verify StoreBroker installation
+      shell: pwsh
+      run: |
+        Get-Command -Module StoreBroker
