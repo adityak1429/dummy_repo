@@ -1,39 +1,20 @@
-
-name: StoreBroker-Publish-Workflow
+# .github/workflows/upload-artifact.yml
+name: Generate PDP Preview & Upload
 
 on:
   workflow_dispatch:
-    inputs:
-      approve_publish:
-        description: 'Approve publishing after PDP review'
-        required: true
-        default: 'no'
 
 jobs:
-  setup-storebroker:
-    runs-on: windows-latest
+  build-and-upload:
+    runs-on: ubuntu-latest
     steps:
-      - name: Setup step (placeholder)
-        run: echo "Setup complete"
-
-  approval-gate:
-    runs-on: windows-latest
-    needs: setup-storebroker
-    steps:
-      - name: Check approval
+      - name: Generate HTML file
         run: |
-          if ('${{ github.event.inputs.approve_publish }}' -ne 'yes') {
-            Write-Output "Publishing not approved. Exiting."
-            exit 1
-          }
+          mkdir -p output
+          echo "<html><body><h1>Microsoft Store PDP Preview</h1></body></html>" > output/preview.html
 
-  publish-app:
-    runs-on: windows-latest
-    needs: approval-gate
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Install StoreBroker
-        run: |
-          Install-Module -Name StoreBroker -Force -Scope CurrentUser
+      - name: Upload HTML artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdp-preview
+          path: output/preview.html
