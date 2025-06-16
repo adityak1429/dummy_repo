@@ -16,6 +16,7 @@
     "en-us": {
       "BaseListing": {
         "Keywords": [],
+        "privacyPolicy" : "pp1",
         "Description": "desc 123 hgfuvvgubl",
         "Features": [],
         "ReleaseNotes": "",
@@ -56,7 +57,29 @@
         "Title": "FitnessFuel"
       },
       "PlatformOverrides": {}
+    },
+    "fr": {
+      "BaseListing": {
+        "Keywords": [],
+        "privacyPolicy" : "pp2",
+        "Description": "desc 123 hgfuvvgubl",
+        "Features": [],
+        "ReleaseNotes": "",
+        "Images": [
+          {
+            "FileName": "Screenshot1.png",
+            "FileStatus": "Uploaded",
+            "Id": "1152922700019982211",
+            "ImageType": "Screenshot"
+          }
+        ],
+        "RecommendedHardware": [],
+        "MinimumHardware": [],
+        "Title": "FitnessFuel"
+      },
+      "PlatformOverrides": {}
     }
+    
   },
   "HardwarePreferences": [],
   "AutomaticBackupEnabled": false,
