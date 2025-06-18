@@ -8,7 +8,7 @@ on:
         required: true
         default: 'publish'
       interactive:
-        description: 'Command to run with MSStore CLI'
+        description: 'interactive'
         required: true
         default: 'publish'
 
