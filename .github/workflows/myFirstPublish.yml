@@ -13,7 +13,7 @@ on:
       productID:
         description: 'productID'
         required: true
-        default: 'true'
+        default: ''
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
         command: ${{ github.event.inputs.command }}
         interactive : ${{ github.event.inputs.interactive }}
         product-id:  ${{ github.event.inputs.productID }}
-        package-path: "${{ github.workspace }}/dir/apps"
-        photos-path: "${{ github.workspace }}/dir/Photos"
-        json-file-path: "${{ github.workspace }}/dir/metadata.json"
+        package-path: "${{ github.workspace }}/dupmy123/apps"
+        photos-path: "${{ github.workspace }}/dupmy123/Photos"
+        json-file-path: "${{ github.workspace }}/dupmy123/metadata.json"
         
