@@ -1,5 +1,4 @@
-name: MSStore CLI
-
+name: myUpdate
 on:
   workflow_dispatch:
     inputs:
