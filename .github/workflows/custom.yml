@@ -29,6 +29,7 @@ jobs:
     - name: Run AutoPublisher
       uses: adityak1429/autopublisher_cli@main
       with:
+        type: win32
         tenant-id: ${{ secrets.AZURE_AD_TENANT_ID }}
         client-id: ${{ secrets.AZURE_AD_APPLICATION_CLIENT_ID }}
         client-secret: ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
