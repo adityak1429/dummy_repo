@@ -27,6 +27,7 @@ jobs:
         client-secret: ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
         seller-id: ${{ secrets.SELLER_ID }}
         command: first_publish
+        type: packaged
         interactive : ${{ github.event.inputs.interactive }}
         product-id:  ${{ github.event.inputs.productID }}
         package-path: "${{ github.workspace }}/dupmy123/apps"
