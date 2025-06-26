@@ -30,6 +30,6 @@ jobs:
         type: packaged
         interactive : ${{ github.event.inputs.interactive }}
         product-id:  ${{ github.event.inputs.productID }}
-        package-path: "${{ github.workspace }}/calorie/packages"
+        package: "${{ github.workspace }}/calorie/packages"
         photos-path: "${{ github.workspace }}/calorie/media"
         
