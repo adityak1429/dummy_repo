@@ -35,7 +35,7 @@ jobs:
         download : ${{ github.event.inputs.download }}
         product-id: 9NP0T3QQXL70
         type: packaged
-        package-path: "${{ github.workspace }}/dir/apps"
+        package: "${{ github.workspace }}/dir/apps"
         photos-path: "${{ github.workspace }}/dir/Photos"
         json-file-path: "${{ github.workspace }}/dir/metadata.json"
         
