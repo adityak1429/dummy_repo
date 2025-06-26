@@ -38,7 +38,7 @@ jobs:
         interactive : ${{ github.event.inputs.interactive }}
         download : ${{ github.event.inputs.download }}
         product-id:  ${{ github.event.inputs.productId }}
-        package-path: "${{ github.workspace }}/dir/apps"
+        package: "${{ github.workspace }}/dir/apps"
         photos-path: "${{ github.workspace }}/dir/Photos"
         json-file-path: "${{ github.workspace }}/dir/metadata.json"
         
