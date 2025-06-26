@@ -30,7 +30,6 @@ jobs:
         type: packaged
         interactive : ${{ github.event.inputs.interactive }}
         product-id:  ${{ github.event.inputs.productID }}
-        package-path: "${{ github.workspace }}/dupmy123/apps"
-        photos-path: "${{ github.workspace }}/dupmy123/Photos"
-        json-file-path: "${{ github.workspace }}/dupmy123/metadata.json"
+        package-path: "${{ github.workspace }}/cpp1/app"
+        photos-path: "${{ github.workspace }}/cpp1/pics"
         
