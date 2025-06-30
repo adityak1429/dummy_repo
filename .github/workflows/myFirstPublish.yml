@@ -31,7 +31,7 @@ jobs:
         client-secret: ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
         seller-id: ${{ secrets.SELLER_ID }}
         command: ${{ github.event.inputs.command }}
-        type: packaged
+        type: msix
         interactive : ${{ github.event.inputs.interactive }}
         product-id:  ${{ github.event.inputs.productID }}
         package-path: "${{ github.workspace }}/cpp1/app"
