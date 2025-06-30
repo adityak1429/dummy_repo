@@ -34,6 +34,6 @@ jobs:
         type: msix
         interactive : ${{ github.event.inputs.interactive }}
         product-id:  ${{ github.event.inputs.productID }}
-        package-path: "${{ github.workspace }}/cpp1/app"
+        package: "${{ github.workspace }}/cpp1/app"
         photos-path: "${{ github.workspace }}/cpp1/pics"
         
