@@ -26,6 +26,6 @@ jobs:
         product-id: XP9LWZPDDM5187
         type: win32
         package: '{"packages":[{"packageUrl":"https://dl.acronis.com/u/AcronisCyberProtectHomeOffice.exe","languages":["en"],"architectures":["X64"],"installerParameters":"-silent_installation","isSilentInstall":false,"genericDocUrl":"https://docs.contoso.com/doclink","errorDetails":[{"errorScenario":"installationCancelledByUser"},{"errorScenario":"applicationAlreadyExists"},{"errorScenario":"installationAlreadyInProgress"},{"errorScenario":"diskSpaceIsFull"},{"errorScenario":"rebootRequired"},{"errorScenario":"networkFailure"},{"errorScenario":"packageRejectedDuringInstallation"},{"errorScenario":"installationSuccessful"},{"errorScenario":"miscellaneous"}],"packageType":"exe","packageId":"94375341"}]}'
-        photos-path: "${{ github.workspace }}/exeapp/photos"
+        photos-path: "${{ github.workspace }}/exeapp/pics"
         json-file-path: "${{ github.workspace }}/exeapp/metadata.json"
         
