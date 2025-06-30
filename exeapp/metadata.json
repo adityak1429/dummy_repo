@@ -2,7 +2,7 @@
   "listings": [
     {
       "language": "en",
-      "description": "im all alone?",
+      "description": "new english desc 12345?",
       "whatsNew": "test",
       "productFeatures": [],
       "searchTerms": [
@@ -18,7 +18,7 @@
     },
         {
       "language": "et",
-      "description": "estionia!!?",
+      "description": "et desc!!?",
       "whatsNew": "idk",
       "productFeatures": [],
       "searchTerms": [
