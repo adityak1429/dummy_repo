@@ -13,7 +13,7 @@
   "TargetPublishMode": "Immediate",
   "TargetPublishDate": "1601-01-01T00:00:00Z",
   "Listings": {
-    "en-us": {
+    "en": {
       "BaseListing": {
         "Keywords": [],
         "privacyPolicy" : "pp1",
