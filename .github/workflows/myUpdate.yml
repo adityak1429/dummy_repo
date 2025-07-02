@@ -1,19 +1,6 @@
 name: myUpdate
 on:
   workflow_dispatch:
-    inputs:
-      command:
-        description: 'Command to run with MSStore CLI'
-        required: true
-        default: 'publish'
-      interactive:
-        description: 'interactive'
-        required: true
-        default: 'true'
-      download:
-        description: 'download'
-        required: true
-        default: 'true'
 
 jobs:
   build:
@@ -30,9 +17,7 @@ jobs:
         client-id: ${{ secrets.AZURE_AD_APPLICATION_CLIENT_ID }}
         client-secret: ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
         seller-id: ${{ secrets.SELLER_ID }}
-        command: ${{ github.event.inputs.command }}
-        interactive : ${{ github.event.inputs.interactive }}
-        download : ${{ github.event.inputs.download }}
+        command: publish
         product-id: 9NP0T3QQXL70
         type: msix
         package: "${{ github.workspace }}/FF/app"
